@@ -1,0 +1,114 @@
+########################
+Author: Manoj
+Date: 05/02/2019
+course: Python with Machine Learning
+#######################
+
+
+numpy --Numeric Python or Numerical Python.
+
+*NumPy is a Python library that is the core library for scientific computing in Python. 
+*It contains a collection of tools and techniques that can be used to solve on a computer mathematical models of problems in Science and Engineering. 
+*One of these tools is a high-performance multidimensional array object that is a powerful data structure for efficient computation of arrays 
+and matrices. 
+*To work with these arrays, there’s a huge amount of high-level mathematical functions operate on these matrices and arrays.
+
+-- on a structural level, an array is basically nothing but pointers. It’s a combination of a memory address, a data type, a shape and strides
+
+--The data pointer indicates the memory address of the first byte in the array,
+--The data type or dtype pointer describes the kind of elements that are contained within the array,
+--The shape indicates the shape of the array, and
+--The strides are the number of bytes that should be skipped in memory to go to the next element. I
+f your strides are (10,1), you need to proceed one byte to get to the next column and 10 bytes to locate the next row.
+
+my_2d_array=[[1 2 3 4] [5 6 7 8]]
+# Print out memory address
+print(my_2d_array.data)
+
+# Print out the shape of `my_array`
+print(my_2d_array.shape)
+
+# Print out the data type of `my_array`
+print(my_2d_array.dtype)
+
+# Print out the stride of `my_array`
+print(my_2d_array.strides)
+
+print(my_2d_array)
+
+
+--the array is stored in memory as 64 bytes (as each integer takes up 8 bytes and you have an array of 8 integers)
+--The strides of the array tell us that you have to skip 8 bytes (one value) to move to the next column, 
+but 32 bytes (4 values) to get to the same position in the next row. As such, the strides for the array will be (32,8).
+
+
+*Rows---axis 0
+*Columns---axis 1
+
+
+# Import `numpy` as `np`
+import numpy as np
+
+# Make the array `my_array`
+my_array = np.array([[1,2,3,4], [5,6,7,8]], dtype=np.int64)
+
+# Print `my_array`
+print(my_array)
+
+
+
+load file
+save file --
+save()--Save an array to a binary file in NumPy .npy format
+savez()--	Save several arrays into an uncompressed .npz archive
+savez_compressed()--Save several arrays into a compressed .npz archive
+
+Broadcasting:
+--it’s a mechanism that allows NumPy to work with arrays of different shapes when you’re performing arithmetic operations.
+ 
+--To put it in a more practical context, you often have an array that’s somewhat larger and another one that’s somewhat smaller. 
+Ideally, you want to use the smaller array multiple times to perform an operation (such as a sum, multiplication, etc.) on the larger array.
+
+*np.add(), np.subtract(), np.multiply(), np.divide() and np.remainder()
+-np.exp() and np.sqrt()
+-np.sin() and np.cos()
+-np.log()
+
+
+a.sum()	Array-wise sum
+a.min()	Array-wise minimum value
+b.max(axis=0)	Maximum value of an array row
+b.cumsum(axis=1)	Cumulative sum of the elements
+a.mean()	Mean
+b.median()	Median
+a.corrcoef()	Correlation coefficient
+np.std(b)	Standard deviation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

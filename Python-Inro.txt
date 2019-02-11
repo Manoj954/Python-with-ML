@@ -1,0 +1,62 @@
+########################
+Author: Manoj
+Date: 30/01/2019
+course: Python with Machine Learning
+#######################
+
+*	Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. 
+*	It was created by Guido van Rossum during 1985- 1990.
+
+Interpreted:
+*	Python is processed at runtime by the interpreter. You do not need to compile your program before executing it. This is similar to PERL and PHP
+*	case sensitive
+
+History of Python
+
+*	developed by Guido van Rossum in the late eighties and early nineties at the National Research Institute for Mathematics and Computer Science in the Netherlands
+*	derived from many other languages, including ABC, Modula-3, C, C++, Algol-68, SmallTalk, and Unix shell and other scripting languages.
+
+
+Installation and Docs:
+
+https://www.python.org/
+https://www.python.org/doc/
+
+
+Python Identifiers
+
+naming conventions :---
+
+*	Class names start with an uppercase letter. All other identifiers start with a lowercase letter.
+*	Starting an identifier with a single leading underscore indicates that the identifier is private.
+*	Starting an identifier with two leading underscores indicates a strongly private identifier.
+*	If the identifier also ends with two trailing underscores, the identifier is a language-defined special name
+
+Reserved words:
+and	exec	not
+assert	finally	or
+break	for	pass
+class	from	print
+continue	global	raise
+def	if	return
+del	import	try
+elif	in	while
+else	is	with
+except	lambda	yield
+
+
+------------------------------------
+word = 'word'
+sentence = "This is a sentence."
+paragraph = """This is a paragraph. It is
+made up of multiple lines and sentences."""
+
+
+comments:
+#some comments..single line use
+'''
+This is a multiline
+comment.
+'''
+
+

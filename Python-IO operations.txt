@@ -1,0 +1,131 @@
+########################
+Author: Manoj
+Date: 31/01/2019
+course: Python with Machine Learning
+#######################
+
+Raw_input
+
+str = raw_input("Enter your input: ");
+print("Received input is : ", str)
+
+Input(*)
+#returns the evaluated result 
+str = input("Enter your input: "); #[x*5 for x in range(2,10,2)]
+print ("Received input is : ", str) #[10, 20, 30, 40]
+
+File Handling:
+syntax:
+file object = open(file_name [, access_mode][, buffering])
+
+# Open a file
+fo = open("foo.txt", "wb")
+print("Name of the file: ", fo.name)
+print("Closed or not : ", fo.closed)
+print("Opening mode : ", fo.mode)
+print("Softspace flag : ", fo.softspace)
+
+fo.close()
+
+fo.write( "Python is a great language.\nYeah its great!!\n");
+
+Renaming files:
+import os
+
+# Rename a file from test1.txt to test2.txt
+os.rename( "test1.txt", "test2.txt" )
+# Delete file test2.txt
+os.remove("text2.txt")
+
+
+# Create a directory "test"
+os.mkdir("test")
+
+#change current Dir
+os.chdir("newdir")
+
+# This would give location of the current directory
+os.getcwd()
+
+#remove directory
+os.rmdir('dirname')
+
+
+==>Exceptions Handling
+e.g:
+Exception
+StopIteration
+SystemExit
+StandardError
+ArithmeticError
+OverflowError
+ZeroDivisionError
+AttributeError
+
+ImportError
+IndexError
+KeyError
+IOError
+
+
+Assertion Error:
+def KelvinToFahrenheit(Temperature):
+   assert (Temperature >= 0),"Colder than absolute zero!"
+   return ((Temperature-273)*1.8)+32
+print KelvinToFahrenheit(273)
+print int(KelvinToFahrenheit(505.78))
+print KelvinToFahrenheit(-5)
+
+Exception Syntax:
+
+try:
+   You do your operations here;
+   ......................
+except ExceptionI:
+   If there is ExceptionI, then execute this block.
+except ExceptionII:
+   If there is ExceptionII, then execute this block.
+   ......................
+else:
+   If there is no exception then execute this block. 
+   
+   
+try:
+   fh = open("testfile", "w")
+   fh.write("This is my test file for exception handling!!")
+except IOError:
+   print "Error: can\'t find file or read data"
+else:
+   print "Written content in the file successfully"
+   fh.close()
+   
+try:
+   fh = open("testfile", "w")
+   fh.write("This is my test file for exception handling!!")
+finally:
+   print "Error: can\'t find file or read data"
+   
+   
+try:
+   fh = open("testfile", "w")
+   try:
+      fh.write("This is my test file for exception handling!!")
+   finally:
+      print "Going to close the file"
+      fh.close()
+except IOError:
+   print "Error: can\'t find file or read data"
+   
+   
+User-Defined Exceptions:
+class Networkerror(RuntimeError):
+   def __init__(self, arg):
+      self.args = arg
+	  
+try:
+   raise Networkerror("Bad hostname")
+except Networkerror,e:
+   print e.args
+   
+
+

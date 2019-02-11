@@ -1,0 +1,132 @@
+########################
+Author: Manoj
+Date: 31/01/2019
+course: Python with Machine Learning
+#######################
+
+DateTime
+import time;  # This is required to include time module.
+ticks = time.time()
+print("Number of ticks since 12:00am, January 1, 1970:", ticks)
+
+localtime = time.localtime(time.time())
+print("Local current time :", localtime)
+
+Formattted
+localtime = time.asctime( time.localtime(time.time()) )
+print("Local current time :", localtime)
+
+
+Calendar
+import calendar
+
+cal = calendar.month(2008, 1)
+print("Here is the calendar:")
+print(cal)
+
+
+
+=>Functions:
+
+Syntax:
+
+def functionname( parameters ):
+   "function_docstring"
+   function_suite
+   return [expression]
+   
+# Function definition is here
+def printme( str ):
+   "This prints a passed string into this function"
+   print str
+   return
+   
+# Now you can call printme function
+printme("I'm first call to user defined function!")
+printme("Again second call to the same function")
+
+
+Pass by reference vs value:
+
+# Function definition is here
+def changeme( mylist ):
+   "This changes a passed list into this function"
+   mylist.append([1,2,3,4]);
+   print("Values inside the function: ", mylist)
+   return
+
+# Now you can call changeme function
+mylist = [10,20,30];
+changeme( mylist );
+print("Values outside the function: ", mylist)
+
+
+# Function definition is here
+def changeme( mylist ):
+   "This changes a passed list into this function"
+   mylist = [1,2,3,4]; # This would assig new reference in mylist
+   print("Values inside the function: ", mylist)
+   return
+
+# Now you can call changeme function
+mylist = [10,20,30];
+changeme( mylist );
+print("Values outside the function: ", mylist)
+
+
+=>Variable-length arguments
+
+# Function definition is here
+def printinfo( arg1, *vartuple ):
+   "This prints a variable passed arguments"
+   print "Output is: "
+   print(arg1)
+   for var in vartuple:
+      print(var)
+   return;
+
+# Now you can call printinfo function
+printinfo( 10 )
+printinfo( 70, 60, 50 )
+
+
+
+Anonymous function:
+syntax:
+lambda [arg1 [,arg2,.....argn]]:expression
+
+
+# Function definition is here
+sum = lambda arg1, arg2: arg1 + arg2;
+
+# Now you can call sum as a function
+print("Value of total : ", sum( 10, 20 ))
+print("Value of total : ", sum( 20, 20 ))
+
+
+
+=>Scope of Variables
+Global variables
+Local variables
+
+
+total = 0; # This is global variable.
+# Function definition is here
+def sum( arg1, arg2 ):
+   # Add both the parameters and return them."
+   total = arg1 + arg2; # Here total is local variable.
+   print("Inside the function local total : ", total)
+   return total;
+
+# Now you can call sum function
+sum( 10, 20 );
+print("Outside the function global total : ", total) 
+
+
+
+# Import built-in module math
+import math
+
+content = dir(math)
+print content
+

@@ -1,0 +1,70 @@
+########################
+Author: Manoj
+Date: 07/02/2019
+course: Python with Machine Learning
+#######################
+
+MatplotLib
+
+
+Two Big Components:
+-The Figure is the overall window or page that everything is drawn on. It’s the top-level component of all the ones that you will consider in the 
+following points. You can create multiple independent Figures. 
+A Figure can have several other things in it, such as a suptitle, which is a centered title to the figure. 
+-can add a legend and color bar to your Figure.
+-To the figure you add Axes. The Axes is the area on which the data is plotted with functions such as plot() and scatter() and that can have ticks, 
+labels, etc. associated with it. This explains why Figures can contain multiple Axes.
+
+
+
+samples:
+https://matplotlib.org/gallery.html
+
+subplot:
+
+fif=plt.figure()
+fig.add_subplot(111)
+
+Well, 111 is equal to 1,1,1, which means that you actually give three arguments to add_subplot(). The three arguments designate the number of rows (1), 
+the number of columns (1) and the plot number (1).
+
+
+What Is The Difference Between add_axes() and add_subplot()?
+
+-The difference between fig.add_axes() and fig.add_subplot() doesn’t lie in the result: they both return an Axes object. However, they do differ in the mechanism that is used to add the axes: you pass a list to add_axes() which is the lower left point, the width and the height. This means that the axes object is positioned in absolute coordinates.
+-In contrast, the add_subplot() function doesn’t provide the option to put the axes at a certain position: it does, however, allow the axes to be situated according to a subplot grid, as you have seen in the section above.
+-In most cases, you’ll use add_subplot() to create axes; Only in cases where the positioning matters, you’ll resort to add_axes(). Alternatively, you can also use subplots() if you want to get one or more subplots at the same time. 
+
+
+
+ax.bar()	Vertical rectangles
+ax.barh()	Horizontal rectangles
+ax.axhline()	Horizontal line across axes
+ax.vline()	Vertical line across axes
+ax.fill()	Filled polygons
+ax.fill_between()	Fill between y-values and 0
+ax.stackplot()	Stack plot
+
+
+ax.arrow()	Arrow
+ax.quiver()	2D field of arrows
+ax.streamplot()	2D vector fields
+ax.hist()	Histogram
+ax.boxplot()	Boxplot
+ax.violinplot()	Violinplot
+
+
+ax.pcolor()	Pseudocolor plot
+ax.pcolormesh()	Pseudocolor plot
+ax.contour()	Contour plot
+ax.contourf()	Filled contour plot
+ax.clabel()	Labeled contour plot
+
+
+Save:
+# Save Figure
+plt.savefig("foo.png")
+
+# Save Transparent Figure
+plt.savefig("foo.png", transparent=True)
+

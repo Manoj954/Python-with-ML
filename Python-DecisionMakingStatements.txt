@@ -1,0 +1,36 @@
+########################
+Author: Manoj
+Date: 30/01/2019
+course: Python with Machine Learning
+#######################
+
+* Non zero and not-null values as TRUE
+* zero or null as FALSE
+
+--if
+--else if
+
+var = 100
+if ( var == 100 ) : print "Value of expression is 100"
+print "Good bye!"
+
+
+Loops:
+
+--for
+--while
+
+Loop controls:
+Break--terminates
+continue- skips the remainder of its body
+pass- its like null operation,nothing happens when its executes
+
+for letter in 'Python': 
+   if letter == 'h':
+      pass
+      print 'This is pass block'
+   print 'Current Letter :', letter
+
+print "Good bye!"
+
+

@@ -1,0 +1,44 @@
+########################
+Author: Manoj
+Date: 30/01/2019
+course: Python with Machine Learning
+#######################
+
+
+=>Types of Operator
+
+-Arithmetic Operators
+-Comparison (Relational) Operators
+-Assignment Operators
+-Logical Operators
+-Bitwise Operators
+-Membership Operators
+-Identity Operators
+
+
+Bitwise Operators
+a = 0011 1100
+
+b = 0000 1101
+
+a&b = 0000 1100
+
+a|b = 0011 1101
+
+a^b = 0011 0001
+
+~a  = 1100 0011
+
+
+Membership Operators:
+--in
+--not in
+
+Identity Operators:(compare the memory locations of two objects)
+--is
+--not is
+
+
+
+
+
